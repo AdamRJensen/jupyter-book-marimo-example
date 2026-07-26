@@ -8,7 +8,8 @@ build:
   jobs:
     build:
       html:
-        - uv run jupyter-book build --html
+        - UV_PROJECT_ENVIRONMENT=.venv uv sync
+        - UV_PROJECT_ENVIRONMENT=.venv uv run jupyter-book build --html
         - mkdir -p "$READTHEDOCS_OUTPUT/html/"
         - cp -r _build/html/. "$READTHEDOCS_OUTPUT/html/"
         - rm -rf _build
