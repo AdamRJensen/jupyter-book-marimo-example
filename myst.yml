@@ -2,6 +2,9 @@
 version: 1
 project:
   id: 48befd3e-1711-42a5-b0bd-e4b713fc52d3
+  plugins:
+    - type: executable
+      path: .venv/bin/jupyter-book-marimo
 
 site:
   template: book-theme
